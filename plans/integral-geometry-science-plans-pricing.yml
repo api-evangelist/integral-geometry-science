@@ -1,0 +1,18 @@
+generated: '2026-08-23'
+method: searched
+source: https://www.igs-group.com/en
+plan_count: 0
+note: >-
+  IGS publishes no pricing, plans or self-serve purchase path. The full 306-URL sitemap
+  (https://www.igs-group.com/sitemap-igs-group-9rjqA-0.xml, HTTP 200) contains no pricing
+  page in any of its three locales; the company sells instruments and diagnostic systems
+  through a contact form (https://www.igs-group.com/en/contact, HTTP 200). Enterprise
+  contact-only, not an undisclosed tier list.
+plans: []
+evidence:
+- url: https://www.igs-group.com/sitemap-igs-group-9rjqA-0.xml
+  status: 200
+  finding: no /pricing, /plans or /purchase path in any locale
+- url: https://www.igs-group.com/en/contact
+  status: 200
+  finding: contact form is the only commercial entry point

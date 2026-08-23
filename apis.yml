@@ -1,10 +1,23 @@
 aid: integral-geometry-science
 name: Integral Geometry Science
-description: 'Integral Geometry Science is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Integral Geometry Science Inc. (IGS) is a Kobe University deep-tech spinout founded on
+  2 April 2012 by Dr. Kenjiro Kimura, who published the first analytical solution to the
+  inverse problem of wave scattering. IGS turns that mathematics into measurement hardware
+  and imaging software that makes the inside of an object visible without cutting it open:
+  microwave mammography for painless, radiation-free breast cancer screening (designated
+  under Japan's Sakigake scheme), non-destructive current-density imaging for rechargeable
+  battery inspection, walk-through security screening for concealed hazardous materials,
+  and rebar corrosion and fracture inspection for civil infrastructure. The company is
+  headquartered in Kobe, Hyogo, Japan, holds patents across Japan, the United States,
+  China and Europe, and is backed by SBI Investment and Japan's NEDO deep-tech program.
+  IGS sells instruments and diagnostic systems to hospitals, manufacturers and
+  infrastructure operators; it publishes no public developer program, API, or SDK.
+image: https://www.igs-group.com/images/ogp.png
 url: https://raw.githubusercontent.com/api-evangelist/integral-geometry-science/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-source-url: https://www.nasdaqprivatemarket.com/
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,6 +25,16 @@ created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Company
+- Medical Devices
+- Medical Imaging
+- Healthcare
+- Batteries
+- Non-Destructive Testing
+- Security Screening
+- Infrastructure
+- Deep Tech
+- Hardware
+- Japan
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +42,42 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/integral-geometry-science-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.igs-group.com/
+- type: Support
+  url: https://www.igs-group.com/en/contact
+- type: PrivacyPolicy
+  url: https://www.igs-group.com/en/privacy-policy
+- type: Blog
+  url: https://www.igs-group.com/en/news
+- type: LLMsTxt
+  url: llms/integral-geometry-science-llms.txt
+- type: Plans
+  url: plans/integral-geometry-science-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/integral-geometry-science-rate-limits.yml
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    IGS sells microwave-imaging instruments and diagnostic systems, not software: its
+    complete 306-URL sitemap carries no developer, docs, or API path in any of its three
+    locales, and /openapi.json, /api-docs, /llms.txt and every /.well-known/ path return
+    a real 404 on www.igs-group.com.
+  evidence:
+  - url: https://www.igs-group.com/sitemap-igs-group-9rjqA-0.xml
+    status: 200
+  - url: https://www.igs-group.com/openapi.json
+    status: 404
+  - url: https://www.igs-group.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.igs-group.com/llms.txt
+    status: 404
+  checked: '2026-08-23'

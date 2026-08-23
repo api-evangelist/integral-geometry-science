@@ -1,0 +1,16 @@
+generated: '2026-08-23'
+method: searched
+source: https://www.igs-group.com/en
+limit_count: 0
+applicable: false
+note: >-
+  Not applicable rather than undocumented: IGS publishes no public API, so there is no
+  runtime surface to rate limit. Contract discovery (openapi/swagger/api-docs paths on the
+  corporate host, plus a full sitemap walk) returned HTTP 404 on every candidate.
+rate_limits: []
+headers: []
+evidence:
+- url: https://www.igs-group.com/openapi.json
+  status: 404
+- url: https://www.igs-group.com/api-docs
+  status: 404

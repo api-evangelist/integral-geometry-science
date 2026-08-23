@@ -1,0 +1,52 @@
+generated: '2026-08-23'
+method: probed
+source: live GET of /.well-known/* on every host named in apis.yml
+note: >-
+  Every probed path returned a real HTTP 404 (the Next.js not-found page, 3,356 bytes) on
+  both the corporate host and the affiliated instrument-business host named on the IGS
+  compliance page. Nothing was fetched and nothing was saved, so NO WellKnown or SecurityTxt
+  pointer is emitted — this file records a verified absence, not a served surface.
+hit_count: 0
+soft_404_control:
+  path: /.well-known/api-evangelist-control-probe-<nonce>
+  status: 404
+  bytes: 3356
+  verdict: honest-404 (host does not answer 200 for arbitrary /.well-known/ paths)
+hosts:
+- host: https://www.igs-group.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://ig-instrum.co.jp
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
