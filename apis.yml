@@ -13,6 +13,17 @@ description: >-
   China and Europe, and is backed by SBI Investment and Japan's NEDO deep-tech program.
   IGS sells instruments and diagnostic systems to hospitals, manufacturers and
   infrastructure operators; it publishes no public developer program, API, or SDK.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.igs-group.com/images/ogp.png
 url: https://raw.githubusercontent.com/api-evangelist/integral-geometry-science/refs/heads/main/apis.yml
 x-type: company
